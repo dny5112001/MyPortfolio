@@ -1,0 +1,49 @@
+.heroContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  border-style: solid;
+  border-width: 2px;
+  border-top-width: 0;
+  border-color: #f0f0f0;
+}
+
+.heroslogan {
+  position: absolute;
+  bottom: 10vw;
+  right: 13vw;
+}
+
+.heroSlogan1 {
+  font-family: "Jazmin";
+  color: #84888e;
+  font-size: 1vw;
+}
+
+.heroSlogan2 {
+  font-family: "Jazmin";
+  color: #84888e;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 400px) {
+  .heroContainer {
+    height: 60vh;
+  }
+  .heroslogan {
+    bottom: 60vw;
+    right: 20vw;
+  }
+
+  .heroSlogan1 {
+    font-size: 2vw;
+  }
+  .heroSlogan2 {
+    font-size: 2vw;
+  }
+}

@@ -1,0 +1,85 @@
+.AboutMeLine {
+  background-color: #000;
+  width: 2vw;
+  height: 2px;
+}
+.AboutMeText {
+  font-family: "Jazmin";
+  font-size: 1.5vw; /* Increased from 1.5vw to 2vw */
+}
+.AboutMe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-width: 2px;
+  border-top-width: 0px;
+  border-color: #f0f0f0;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.AboutMeName {
+  font-family: "JazminSemiBold";
+  font-size: 2vw; /* Increased from 2vw to 3vw */
+  text-align: left;
+  width: 60%;
+}
+
+.AboutMeDescription {
+  font-family: "Jazmin";
+  text-align: justify;
+  width: 60%;
+  color: #84888e;
+  font-size: 1vw; /* Increased from 1vw to 1.5vw */
+}
+.AboutMeBackground {
+  font-family: "JazminSemiBold";
+  font-size: 1.5vw; /* Increased from 1.5vw to 2vw */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.AboutMeBackgroundButton {
+  color: "#84888e";
+  cursor: "pointer";
+  font-size: 3vw; /* Increased from 3vw to 4vw */
+}
+.AboutMeBackgroundText {
+  font-family: "Jazmin";
+  text-align: justify;
+  color: "#84888E";
+  margin-top: 10px;
+  font-size: 1vw; /* Increased from 1vw to 1.5vw */
+}
+@media (max-width: 480px) {
+  .AboutMeLine {
+    width: 5vw;
+    height: 2px;
+  }
+  .AboutMeText {
+    font-size: 20px; /* Increased from 3vw to 4vw */
+  }
+  .AboutMe {
+    min-height: 50vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .AboutMeName {
+    font-size: 6vw; /* Increased from 5vw to 6vw */
+  }
+  .AboutMeDescription {
+    font-size: 3vw; /* Increased from 2vw to 3vw */
+  }
+  .AboutMeBackground {
+    font-size: 4vw; /* Increased from 3vw to 4vw */
+  }
+  .AboutMeBackgroundButton {
+    font-size: 7vw; /* Increased from 6vw to 7vw */
+  }
+  .AboutMeBackgroundText {
+    font-size: 3vw; /* Increased from 2vw to 3vw */
+  }
+}

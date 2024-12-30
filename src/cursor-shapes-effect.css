@@ -56,15 +56,28 @@
 .cursor {
   position: fixed;
   background-color: #2ecec2;
-  width: 1.538vw; /* 20px converted to vw */
-  height: 1.538vw;
+  width: 15px; /* Use a fixed pixel size */
+  height: 15px; /* Use a fixed pixel size */
   border-radius: 50%;
-  /* margin: -100px 0 0 -220px; Margins converted based on 1300px width */
-  pointer-events: none;
+  /* pointer-events: none; */
+  margin: -5.385vw 0 0 -5.385vw;
   z-index: 10000;
+  transition: transform 0.1s ease-in-out; /* Smooth cursor movement */
 }
 
 ::selection {
   color: #fff;
   background: #0f5d56;
+}
+
+@media (max-width: 900px) {
+  .container {
+    height: 40vh;
+    width: 70vw;
+  }
+
+  .content {
+    height: 40vh;
+    width: 70vw;
+  }
 }

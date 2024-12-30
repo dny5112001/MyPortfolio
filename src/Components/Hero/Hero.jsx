@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import "./Hero.css";
 import "../../cursor-shapes-effect.css";
 
 const Hero = () => {
@@ -28,19 +29,9 @@ const Hero = () => {
       document.body.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "90vh",
-        borderStyle: "solid",
-        borderWidth: "2px",
-        borderTopWidth: "0px",
-        borderColor: "#F0F0F0",
-      }}
-    >
+    <div className="heroContainer">
       <div style={{ textAlign: "center" }}>
         <div className="container">
           <div className="shapes">
@@ -85,19 +76,10 @@ const Hero = () => {
           <div ref={cursorRef} className="cursor" />
         </div>
       </div>
-      <div style={{ position: "absolute", bottom: "10vw", right: "13vw" }}>
+      <div className="heroslogan">
+        <div className="heroSlogan1">Simplify. Humanize. Innovate.</div>
         <div
-          style={{ fontFamily: "Jazmin", color: "#84888E", fontSize: "1vw" }}
-        >
-          Simplify. Humanize. Innovate.
-        </div>
-        <div
-          style={{
-            fontFamily: "Jazmin",
-            color: "#84888E",
-            fontSize: "1vw",
-            cursor: "pointer",
-          }}
+          className="heroSlogan2"
           onMouseEnter={(e) => {
             e.target.style.textDecoration = "underline";
           }}
