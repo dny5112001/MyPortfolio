@@ -14,7 +14,12 @@ const Contact = () => {
       }}
     >
       <div className="contact-grid">
-        <div className="contact-section logo-section">
+        <div
+          className="contact-section logo-section"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           <img src={Logo} alt="Logo" className="logo" />
         </div>
         <div className="contact-section crafts-section">
@@ -49,7 +54,7 @@ const Contact = () => {
             </li>
             <li>
               <a
-                href="/path/to/your-resume.pdf"
+                href="https://drive.google.com/file/d/1FAxIIPAOqNpO6PeSv0ZpC_VcFAwztvY9/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -63,7 +68,7 @@ const Contact = () => {
         </div>
         <div className="contact-section copyright-section">
           <p>© 2025 Deepak Yadav. All Rights Reserved.</p>
-          <p className="made-with">Made with 🩶 and Americano</p>
+          <p className="made-with">Made with 🩶 and Espresso ☕</p>
         </div>
       </div>
     </div>

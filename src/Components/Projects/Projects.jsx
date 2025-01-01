@@ -1,9 +1,22 @@
 import React from "react";
 import Attendity1 from "../../assets/ProjectImages/Attendity1.jpg";
 import Attendity2 from "../../assets/ProjectImages/Attendity2.jpg";
+import Spam1 from "../../assets/ProjectImages/Spam1.jpg";
+import Spam2 from "../../assets/ProjectImages/spam2.jpg";
+import Chateo1 from "../../assets/ProjectImages/Chateo1.jpeg";
+import Chateo2 from "../../assets/ProjectImages/Chateo2.jpeg";
+import Chateo3 from "../../assets/ProjectImages/Chateo3.jpeg";
+import Chateo4 from "../../assets/ProjectImages/chateo4.jpeg";
+import Chateo5 from "../../assets/ProjectImages/Chateo5.jpeg";
 import "./Projects.css";
 
-const ProjectSection = ({ title, subtitle, tags, imageLeft = false }) => (
+const ProjectSection = ({
+  title,
+  subtitle,
+  tags,
+  images,
+  imageLeft = false,
+}) => (
   <div className="project-section">
     <div className={`project-content ${imageLeft ? "image-left" : ""}`}>
       <div className="project-info">
@@ -21,8 +34,13 @@ const ProjectSection = ({ title, subtitle, tags, imageLeft = false }) => (
         </div>
       </div>
       <div className="project-images">
-        <img src={Attendity1} alt={`${subtitle} Screenshot 1`} />
-        <img src={Attendity2} alt={`${subtitle} Screenshot 2`} />
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`${subtitle} Screenshot ${index + 1}`}
+          />
+        ))}
       </div>
     </div>
   </div>
@@ -60,6 +78,7 @@ const Projects = () => {
           "Node js",
           "Express js",
         ]}
+        images={[Attendity1, Attendity2]}
       />
 
       <ProjectSection
@@ -77,22 +96,25 @@ const Projects = () => {
           "Express js",
         ]}
         imageLeft={true}
+        images={[Chateo1, Chateo2]}
       />
 
       <ProjectSection
-        subtitle="Spam Detector"
+        subtitle="Spam Shield"
         title="Spam Detection using Machine Learning"
         tags={[
           "Machine Learning",
           "Spam Detection",
+          "ML Model Training",
           "Natural Language Processing",
           "Python",
           "Flask",
           "React Native",
         ]}
+        images={[Spam1, Spam2]}
       />
 
-      <ProjectSection
+      {/* <ProjectSection
         subtitle="PixForge"
         title="Image Editing Application"
         tags={[
@@ -106,7 +128,8 @@ const Projects = () => {
           "Flask",
         ]}
         imageLeft={true}
-      />
+        images={[Attendity1, Attendity2]}
+      /> */}
     </div>
   );
 };
